@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 
 public class Game extends Canvas implements Runnable {
 
-    private static Logger LOGGER = Logger.getLogger(Game.TITLE);
     public static int WIDTH = 800, HEIGHT = 650;
     public static String TITLE = "Kiliseci";
 
@@ -69,7 +68,7 @@ public class Game extends Canvas implements Runnable {
         try {
             stop();
         } catch (InterruptedException e) {
-            LOGGER.info(e.getMessage());
+            System.out.println(e.getMessage());
         }
     }
 
