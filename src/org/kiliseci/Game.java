@@ -15,8 +15,15 @@ public class Game extends Canvas implements Runnable {
     private Thread thread;
     private boolean isRunning = false;
 
+    private Handler handler;
+
     public Game() {
         new Window(WIDTH, HEIGHT, TITLE, this);
+        init();
+    }
+
+    private void init(){
+        handler = new Handler();
     }
 
     private synchronized void start() {
